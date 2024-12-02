@@ -1,0 +1,234 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+
+.to-do-app{
+  width: 100%;
+  max-width: 540px;
+  background:linear-gradient(135deg, #327814,#91d076);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius:  10px;
+}
+.to-do-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.to-do-app img{
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e27c7c,#f0bfbf);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+  
+}
+::placeholder {
+  color: rgb(54, 43, 124);
+  opacity: 1; 
+}
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: linear-gradient(135deg, #eb07aa, #da7fb4);
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+}
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before{
+  content:'';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+
+}
+ul li.checked{
+  color:green;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(./images/checked.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover{
+  background: #edeef0;
+}
+
+
+
+
+/* media queries */
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  .to-do-app {
+    max-width: 600px; /* Slightly larger on big screens */
+    margin: 120px auto; /* Adjust margins */
+    padding: 50px 40px; /* Increase padding for spacious layout */
+  }
+
+  button {
+    padding: 20px 60px; /* Larger buttons */
+    font-size: 18px;
+  }
+
+  ul li {
+    font-size: 20px; /* Larger font for readability */
+    padding: 15px 10px 15px 60px; /* Adjust padding */
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .to-do-app {
+    max-width: 90%; /* Use more screen width */
+    margin: 80px auto; /* Adjust vertical spacing */
+    padding: 40px 25px; /* Reduce padding */
+  }
+
+  .row {
+    flex-direction: row; /* Maintain layout */
+    padding-left: 15px; /* Reduce padding */
+  }
+
+  button {
+    padding: 14px 45px; /* Slightly smaller buttons */
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+  }
+}
+
+/* Mobile Phones (Up to 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 5px; /* Reduce padding around container */
+  }
+
+  .to-do-app {
+    max-width: 95%; /* Full width minus padding */
+    margin: 50px auto; /* Smaller margins for mobile */
+    padding: 30px 20px; /* Compact padding */
+    border-radius: 8px; /* Adjust corner radius */
+  }
+
+  .row {
+    /* flex-direction: column; Stack input and button */
+    padding-left: 10px; /* Reduce left padding */
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 8px; /* Smaller padding */
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%; /* Full-width button */
+    padding: 12px 20px; /* Compact padding */
+    /* margin-top: 10px; Add spacing for stacked layout */
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 16px; /* Adjust text size */
+    padding: 10px 5px 10px 40px; /* Compact padding */
+  }
+
+  ul li span {
+    width: 30px; /* Smaller delete icon */
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+/* Small Devices (Small phones, below 480px) */
+@media (max-width: 480px) {
+  .to-do-app {
+    margin: 30px auto; /* Further reduce margins */
+    padding: 20px 15px; /* Compact padding */
+  }
+.card{
+  display: flex;
+  flex-wrap: wrap ;
+}
+  input {
+    font-size: 12px; /* Smaller font */
+  }
+
+  button {
+    /* padding: 10px 15px; Smaller buttons */
+    font-size: 12px;
+  }
+
+  ul li {
+    font-size: 14px; /* Compact text */
+    padding: 8px 4px 8px 35px;
+  }
+
+  ul li span {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
