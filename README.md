@@ -1,6 +1,14 @@
 # Day2-To-Do-List
 
+Url: https://aayushh-251307.github.io/Day2-To-Do-List/
+
+
+
+
 **Project Description**
+
+
+
 The To-Do List application is a simple and efficient task management tool built using HTML, CSS, and JavaScript. It allows users to add, delete, and manage tasks interactively. The tasks are stored in the browser's localStorage, ensuring they persist even after the page is refreshed. The user interface is aesthetically enhanced with modern design elements like a linear gradient background and dynamic effects.
 
 **Technical Specifications**
@@ -47,3 +55,21 @@ Responsive design to ensure usability across various devices.
 
 
 This project demonstrates the effective use of web development technologies to create a functional, visually appealing, and user-centric application. It strengthened practical knowledge in DOM manipulation, local storage, and advanced CSS design techniques.
+
+
+
+
+
+
+
+
+**User interface**
+
+
+![Screenshot (36)](https://github.com/user-attachments/assets/ffa6f549-4f45-4e43-9367-6369b86bdac9)
+
+
+
+
+
+![Screenshot (35)](https://github.com/user-attachments/assets/590148d7-0d70-4ee4-b73a-c9925edac139)
